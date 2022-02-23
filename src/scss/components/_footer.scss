@@ -1,0 +1,41 @@
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 120px 0 30px 0;
+  text-align: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__descr {
+    max-width: 500px;
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+
+    color: #ffffff;
+  }
+}

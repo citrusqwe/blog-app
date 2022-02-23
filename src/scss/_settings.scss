@@ -1,0 +1,193 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'SFPro', sans-serif;
+  font-weight: 400;
+  color: $black;
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.is-outer {
+  position: relative !important; // stylelint-disable-line declaration-no-important
+  left: -9999px !important; // stylelint-disable-line declaration-no-important
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.for-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.error {
+  color: #ff4019 !important; // stylelint-disable-line declaration-no-important
+  margin-bottom: 10px;
+  max-width: 350px;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.title {
+  max-width: 900px;
+  font-family: 'Mackay';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 100%;
+  color: $black;
+}
+
+.descr {
+  max-width: 600px;
+  font-family: 'SFMono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  color: #000000;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  background-color: $black;
+  color: $white;
+  padding: 15px 25px;
+}
+
+.btn-hover {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 25px;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+  background-color: $black;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $black;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: $white;
+    width: 0%;
+    transition: all 0.3s;
+  }
+}
+
+.input-hover {
+  outline: none;
+  border: 0;
+  padding: 7px 10px;
+  border-bottom: 1px solid #ccc;
+
+  & ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 99;
+  }
+
+  & ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $black;
+    transition: 0.4s;
+  }
+  &:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}

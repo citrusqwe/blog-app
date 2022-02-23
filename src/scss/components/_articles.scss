@@ -1,0 +1,40 @@
+.articles {
+  padding: 50px 0;
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+.filters {
+  margin-bottom: 30px;
+
+  &__text {
+    margin-right: 15px;
+  }
+}
+
+.pagination {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    cursor: pointer;
+  }
+
+  &__prev {
+    margin-right: 15px;
+  }
+
+  &__prev,
+  &__next {
+    cursor: pointer;
+  }
+}

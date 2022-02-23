@@ -1,0 +1,10 @@
+@import './vendor/normalize';
+@import 'global.scss';
+@import 'vars';
+
+@import './components/header';
+@import './components/main';
+@import './components/footer';
+@import './components/logon';
+@import './components/profile';
+@import './components/articles';
